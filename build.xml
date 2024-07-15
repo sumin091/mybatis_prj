@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="mybatis_prj">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="17"/>
+    <property name="source" value="17"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="../../../Users/user/.m2/repository/org/mybatis/mybatis/3.5.6/mybatis-3.5.6.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/junit/junit/4.10/junit-4.10.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/servlets/com/cos/05Nov2002/cos-05Nov2002.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/com/oracle/database/jdbc/ojdbc8/23.2.0.0/ojdbc8-23.2.0.0.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar"/>
+        <pathelement location="../../../Users/user/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar"/>
+    </path>
+    <path id="Server Runtime [Apache Tomcat v9.0].libraryclasspath">
+        <pathelement location="../../apache-tomcat-9.0.85/lib/annotations-api.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/catalina-ant.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/catalina-ha.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/catalina-ssi.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/catalina-storeconfig.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/catalina-tribes.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/catalina.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/ecj-4.20.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/el-api.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/jasper-el.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/jasper.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/jaspic-api.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/jsp-api.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/ojdbc8.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/servlet-api.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-api.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-coyote.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-dbcp.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-cs.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-de.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-ko.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-pt-BR.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-ru.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-i18n-zh-CN.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-jdbc.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-jni.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-util-scan.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-util.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/tomcat-websocket.jar"/>
+        <pathelement location="../../apache-tomcat-9.0.85/lib/websocket-api.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="src/main/webapp/WEB-INF/lib/sist_util.jar"/>
+    </path>
+    <path id="mybatis_prj.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="target/test-classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+        <path refid="Server Runtime [Apache Tomcat v9.0].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+    </path>
+    <path id="run.BoardDAO.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.EmailSender.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExamMapper4DAO.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExamMapper5DAO.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExamMapper5Service.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExamMapper6DAO.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExamMapper7DAO.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Test.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.TestMyBatisHandler.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.UseMyBatisHandlerDAO.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.UseMyBatisHandlerDAO2.classpath">
+        <path refid="mybatis_prj.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/resources">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+                <exclude name="**"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/resources">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+                <exclude name="**"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+        <delete dir="target/test-classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <src path="src/main/resources"/>
+            <exclude name="**"/>
+            <classpath refid="mybatis_prj.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <src path="src/test/resources"/>
+            <exclude name="**"/>
+            <classpath refid="mybatis_prj.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="BoardDAO">
+        <java classname="kr.co.sist.user.board.BoardDAO" failonerror="true" fork="yes">
+            <classpath refid="run.BoardDAO.classpath"/>
+        </java>
+    </target>
+    <target name="EmailSender">
+        <java classname="kr.co.sist.mail.EmailSender" failonerror="true" fork="yes">
+            <classpath refid="run.EmailSender.classpath"/>
+        </java>
+    </target>
+    <target name="ExamMapper4DAO">
+        <java classname="day0527.ExamMapper4DAO" failonerror="true" fork="yes">
+            <classpath refid="run.ExamMapper4DAO.classpath"/>
+        </java>
+    </target>
+    <target name="ExamMapper5DAO">
+        <java classname="day0529.ExamMapper5DAO" failonerror="true" fork="yes">
+            <classpath refid="run.ExamMapper5DAO.classpath"/>
+        </java>
+    </target>
+    <target name="ExamMapper5Service">
+        <java classname="day0529.ExamMapper5Service" failonerror="true" fork="yes">
+            <classpath refid="run.ExamMapper5Service.classpath"/>
+        </java>
+    </target>
+    <target name="ExamMapper6DAO">
+        <java classname="day0530.ExamMapper6DAO" failonerror="true" fork="yes">
+            <classpath refid="run.ExamMapper6DAO.classpath"/>
+        </java>
+    </target>
+    <target name="ExamMapper7DAO">
+        <java classname="day0531.ExamMapper7DAO" failonerror="true" fork="yes">
+            <classpath refid="run.ExamMapper7DAO.classpath"/>
+        </java>
+    </target>
+    <target name="Test">
+        <java classname="day0521.Test" failonerror="true" fork="yes">
+            <classpath refid="run.Test.classpath"/>
+        </java>
+    </target>
+    <target name="TestMyBatisHandler">
+        <java classname="day0522.TestMyBatisHandler" failonerror="true" fork="yes">
+            <classpath refid="run.TestMyBatisHandler.classpath"/>
+        </java>
+    </target>
+    <target name="UseMyBatisHandlerDAO">
+        <java classname="day0523.UseMyBatisHandlerDAO" failonerror="true" fork="yes">
+            <classpath refid="run.UseMyBatisHandlerDAO.classpath"/>
+        </java>
+    </target>
+    <target name="UseMyBatisHandlerDAO2">
+        <java classname="day0524.UseMyBatisHandlerDAO2" failonerror="true" fork="yes">
+            <classpath refid="run.UseMyBatisHandlerDAO2.classpath"/>
+        </java>
+    </target>
+</project>
